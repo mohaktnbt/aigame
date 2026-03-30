@@ -1,0 +1,43 @@
+{
+  "universe": "Dune",
+  "physics": {
+    "ftl_travel": true,
+    "ftl_method": "spacing_guild_navigators_prescience",
+    "energy_shields": true,
+    "shield_worm_interaction": "shields attract sandworms",
+    "lasgun_shield_interaction": "nuclear-level explosion"
+  },
+  "special_systems": {
+    "spice_melange": {
+      "exists": true,
+      "enables_prescience": true,
+      "extends_life": true,
+      "required_for_space_travel": true,
+      "only_source": "Arrakis",
+      "addictive": true,
+      "withdrawal_fatal": true
+    },
+    "bene_gesserit": {
+      "voice": true,
+      "other_memory": true,
+      "breeding_program": true
+    },
+    "mentats": {
+      "human_computers": true,
+      "reason": "AI banned after Butlerian Jihad"
+    },
+    "sandworms": {
+      "produce_spice": true,
+      "rideable": true,
+      "attracted_by_rhythmic_vibrations": true,
+      "destroyed_by_water": true
+    }
+  },
+  "technology_constraints": {
+    "no_computers": "Butlerian Jihad banned thinking machines",
+    "no_atomics_on_humans": "Great Convention forbids nuclear weapons against humans",
+    "melee_combat_dominant": "shields make ranged combat less effective"
+  },
+  "realism_level": "hard_scifi_with_mysticism",
+  "validation_notes": "Prescience is real. Spice is the most valuable substance. No computers or AI. Shields work but attract sandworms on Arrakis."
+}

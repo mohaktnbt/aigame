@@ -1,0 +1,52 @@
+{
+  "universe": "Game of Thrones / A Song of Ice and Fire",
+  "physics": {
+    "ftl_travel": false,
+    "magic_exists": true,
+    "magic_level": "low_initially_rising",
+    "dragons_exist": true,
+    "seasons_irregular": true
+  },
+  "special_systems": {
+    "dragons": {
+      "exists": true,
+      "fire_breathing": true,
+      "bonded_to_riders": true,
+      "nearly_extinct": true
+    },
+    "white_walkers": {
+      "exists": true,
+      "weakness": "dragonglass_and_valyrian_steel",
+      "can_raise_dead": true
+    },
+    "faceless_men": {
+      "exists": true,
+      "can_change_faces": true
+    },
+    "red_magic": {
+      "exists": true,
+      "fire_visions": true,
+      "resurrection_possible": true
+    },
+    "warging": {
+      "exists": true,
+      "control_animals": true,
+      "rare": true
+    }
+  },
+  "technology_constraints": {
+    "era": "medieval",
+    "communication": "ravens",
+    "travel": "horse_ship",
+    "weapons": "swords_bows_siege_weapons",
+    "special_materials": ["valyrian_steel", "dragonglass"]
+  },
+  "social_systems": {
+    "feudal": true,
+    "great_houses": true,
+    "nights_watch": true,
+    "iron_throne": "central power seat"
+  },
+  "realism_level": "low_fantasy",
+  "validation_notes": "Magic is real but rare and costly. Dragons are the ultimate weapon. Political intrigue is as powerful as military force. Winter is coming — literally."
+}

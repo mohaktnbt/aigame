@@ -1,0 +1,60 @@
+{
+  "id": "mars-colony-2145",
+  "title": "Mars Colony 2145: Independence Crisis",
+  "description": "The Mars colonies have grown to 2 million inhabitants and are demanding independence from Earth governance. Tensions rise as Earth tightens resource controls.",
+  "type": "SCIFI",
+  "era": "2145",
+  "universe_rules": "hard_scifi",
+  "map": "mars_colonies",
+  "factions": [
+    {
+      "id": "mars_council",
+      "name": "Mars Colonial Council",
+      "leader": "Director Chen Wei",
+      "government": "Colonial Democracy",
+      "initial_gdp": 450,
+      "initial_military": 20,
+      "initial_tech": 95,
+      "initial_sentiment": 78,
+      "color": "#CC3300"
+    },
+    {
+      "id": "earth_un",
+      "name": "United Nations of Earth",
+      "leader": "Secretary-General Adeyemi",
+      "government": "Federal Union",
+      "initial_gdp": 8500,
+      "initial_military": 90,
+      "initial_tech": 85,
+      "initial_sentiment": 45,
+      "color": "#0066CC"
+    },
+    {
+      "id": "belt_miners",
+      "name": "Belt Mining Coalition",
+      "leader": "Captain Rosa Vasquez",
+      "government": "Workers' Cooperative",
+      "initial_gdp": 200,
+      "initial_military": 15,
+      "initial_tech": 70,
+      "initial_sentiment": 60,
+      "color": "#999999"
+    }
+  ],
+  "canonical_events": [
+    {
+      "id": "supply_embargo",
+      "name": "Earth Supply Embargo",
+      "base_probability": 0.70,
+      "trigger_conditions": ["mars_declares_autonomy"],
+      "narrative_gravity": 0.75
+    },
+    {
+      "id": "dome_breach",
+      "name": "Olympus Mons Dome Breach",
+      "base_probability": 0.30,
+      "trigger_conditions": ["sabotage_or_accident"],
+      "narrative_gravity": 0.50
+    }
+  ]
+}

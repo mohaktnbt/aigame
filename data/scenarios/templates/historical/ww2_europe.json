@@ -1,0 +1,103 @@
+{
+  "id": "ww2-europe",
+  "title": "World War II: European Theater",
+  "description": "September 1939. Germany has invaded Poland. The world holds its breath as the greatest conflict in human history begins to unfold.",
+  "type": "HISTORICAL",
+  "era": "1939-1945",
+  "universe_rules": "historical_earth",
+  "map": "world_borders",
+  "factions": [
+    {
+      "id": "germany",
+      "name": "Nazi Germany",
+      "leader": "Adolf Hitler",
+      "government": "Fascist Dictatorship",
+      "initial_gdp": 384,
+      "initial_military": 95,
+      "initial_tech": 85,
+      "initial_sentiment": 72,
+      "color": "#333333"
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "leader": "Neville Chamberlain",
+      "government": "Parliamentary Democracy",
+      "initial_gdp": 316,
+      "initial_military": 70,
+      "initial_tech": 80,
+      "initial_sentiment": 55,
+      "color": "#003078"
+    },
+    {
+      "id": "france",
+      "name": "French Republic",
+      "leader": "Édouard Daladier",
+      "government": "Parliamentary Republic",
+      "initial_gdp": 199,
+      "initial_military": 65,
+      "initial_tech": 70,
+      "initial_sentiment": 40,
+      "color": "#002395"
+    },
+    {
+      "id": "ussr",
+      "name": "Soviet Union",
+      "leader": "Joseph Stalin",
+      "government": "Communist State",
+      "initial_gdp": 359,
+      "initial_military": 80,
+      "initial_tech": 60,
+      "initial_sentiment": 50,
+      "color": "#CC0000"
+    },
+    {
+      "id": "usa",
+      "name": "United States",
+      "leader": "Franklin D. Roosevelt",
+      "government": "Federal Republic",
+      "initial_gdp": 869,
+      "initial_military": 40,
+      "initial_tech": 90,
+      "initial_sentiment": 30,
+      "color": "#3C3B6E"
+    }
+  ],
+  "canonical_events": [
+    {
+      "id": "fall_of_france",
+      "name": "Fall of France",
+      "base_probability": 0.75,
+      "trigger_conditions": ["germany_attacks_france"],
+      "narrative_gravity": 0.8
+    },
+    {
+      "id": "battle_of_britain",
+      "name": "Battle of Britain",
+      "base_probability": 0.85,
+      "trigger_conditions": ["fall_of_france"],
+      "narrative_gravity": 0.7
+    },
+    {
+      "id": "operation_barbarossa",
+      "name": "Operation Barbarossa",
+      "base_probability": 0.70,
+      "trigger_conditions": ["germany_controls_western_europe"],
+      "narrative_gravity": 0.9
+    },
+    {
+      "id": "pearl_harbor",
+      "name": "Attack on Pearl Harbor",
+      "base_probability": 0.65,
+      "trigger_conditions": ["us_embargo_japan"],
+      "narrative_gravity": 0.85
+    },
+    {
+      "id": "d_day",
+      "name": "D-Day Normandy Invasion",
+      "base_probability": 0.60,
+      "trigger_conditions": ["allied_air_superiority", "us_in_war"],
+      "narrative_gravity": 0.75
+    }
+  ]
+}

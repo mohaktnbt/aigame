@@ -1,0 +1,79 @@
+{
+  "id": "dune-arrakis",
+  "title": "Dune: The Spice Must Flow",
+  "description": "House Atreides has just arrived on Arrakis to take control of spice production from the Harkonnens. The desert planet holds many dangers and secrets.",
+  "type": "POP_CULTURE",
+  "universe": "Dune",
+  "era": "10191 AG",
+  "universe_rules": "dune",
+  "map": "arrakis",
+  "factions": [
+    {
+      "id": "house_atreides",
+      "name": "House Atreides",
+      "leader": "Duke Leto Atreides",
+      "government": "Noble House",
+      "initial_military": 60,
+      "initial_tech": 75,
+      "initial_sentiment": 80,
+      "initial_resources": 40,
+      "color": "#006633"
+    },
+    {
+      "id": "house_harkonnen",
+      "name": "House Harkonnen",
+      "leader": "Baron Vladimir Harkonnen",
+      "government": "Noble House",
+      "initial_military": 85,
+      "initial_tech": 70,
+      "initial_sentiment": 25,
+      "initial_resources": 90,
+      "color": "#CC0000"
+    },
+    {
+      "id": "fremen",
+      "name": "Fremen",
+      "leader": "Stilgar",
+      "government": "Tribal Federation",
+      "initial_military": 70,
+      "initial_tech": 40,
+      "initial_sentiment": 90,
+      "initial_resources": 30,
+      "color": "#CC9933"
+    },
+    {
+      "id": "spacing_guild",
+      "name": "Spacing Guild",
+      "leader": "Edric",
+      "government": "Monopolistic Guild",
+      "initial_military": 10,
+      "initial_tech": 95,
+      "initial_sentiment": 50,
+      "initial_resources": 95,
+      "color": "#336699"
+    }
+  ],
+  "canonical_events": [
+    {
+      "id": "harkonnen_attack",
+      "name": "Harkonnen Attack on Arrakeen",
+      "base_probability": 0.85,
+      "trigger_conditions": ["atreides_established"],
+      "narrative_gravity": 0.90
+    },
+    {
+      "id": "paul_desert",
+      "name": "Paul Escapes to the Desert",
+      "base_probability": 0.75,
+      "trigger_conditions": ["harkonnen_attack"],
+      "narrative_gravity": 0.80
+    },
+    {
+      "id": "fremen_alliance",
+      "name": "Paul Accepted by Fremen",
+      "base_probability": 0.65,
+      "trigger_conditions": ["paul_desert"],
+      "narrative_gravity": 0.70
+    }
+  ]
+}

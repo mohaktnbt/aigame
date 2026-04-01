@@ -1,0 +1,77 @@
+{
+  "description": "Base nation data for historical scenarios",
+  "nations": [
+    {
+      "id": "usa",
+      "name": "United States of America",
+      "capital": "Washington, D.C.",
+      "coordinates": [-77.0369, 38.9072],
+      "continent": "North America",
+      "base_gdp_rank": 1,
+      "government_types": ["Federal Republic"]
+    },
+    {
+      "id": "china",
+      "name": "People's Republic of China",
+      "capital": "Beijing",
+      "coordinates": [116.4074, 39.9042],
+      "continent": "Asia",
+      "base_gdp_rank": 2,
+      "government_types": ["Communist State", "Empire", "Republic"]
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "capital": "Moscow",
+      "coordinates": [37.6173, 55.7558],
+      "continent": "Europe/Asia",
+      "base_gdp_rank": 6,
+      "government_types": ["Federal Republic", "Empire", "Communist State"]
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "capital": "London",
+      "coordinates": [-0.1276, 51.5074],
+      "continent": "Europe",
+      "base_gdp_rank": 5,
+      "government_types": ["Constitutional Monarchy"]
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "capital": "Berlin",
+      "coordinates": [13.4050, 52.5200],
+      "continent": "Europe",
+      "base_gdp_rank": 4,
+      "government_types": ["Federal Republic", "Empire", "Fascist Dictatorship"]
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "capital": "Paris",
+      "coordinates": [2.3522, 48.8566],
+      "continent": "Europe",
+      "base_gdp_rank": 7,
+      "government_types": ["Republic", "Empire", "Monarchy"]
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "capital": "Tokyo",
+      "coordinates": [139.6917, 35.6895],
+      "continent": "Asia",
+      "base_gdp_rank": 3,
+      "government_types": ["Constitutional Monarchy", "Empire"]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "capital": "New Delhi",
+      "coordinates": [77.2090, 28.6139],
+      "continent": "Asia",
+      "base_gdp_rank": 8,
+      "government_types": ["Federal Republic", "Colony", "Empire"]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "universe": "Star Wars",
+  "physics": {
+    "ftl_travel": true,
+    "ftl_method": "hyperspace",
+    "energy_weapons": true,
+    "shields": true,
+    "artificial_gravity": true
+  },
+  "special_systems": {
+    "the_force": {
+      "exists": true,
+      "light_side": true,
+      "dark_side": true,
+      "force_abilities": ["telekinesis", "mind_trick", "precognition", "force_lightning", "force_choke", "battle_meditation"],
+      "force_sensitivity_rare": true
+    },
+    "droids": {
+      "sentient_capable": true,
+      "widely_used": true
+    },
+    "lightsabers": {
+      "exists": true,
+      "deflects_blasters": true
+    }
+  },
+  "technology_constraints": {
+    "communication": "holonet (FTL communication)",
+    "travel_speed": "hyperspace varies by route",
+    "weapon_scale": "from blasters to planet-destroying superweapons"
+  },
+  "social_systems": {
+    "jedi_order": "ancient peacekeepers, mostly destroyed",
+    "sith": "rule of two, hidden in plain sight",
+    "senate": "dissolved by Emperor, regional governors"
+  },
+  "realism_level": "space_opera",
+  "validation_notes": "The Force is real and should be treated as a valid capability. Hyperspace travel is standard. Planet-destroying weapons exist but are rare."
+}

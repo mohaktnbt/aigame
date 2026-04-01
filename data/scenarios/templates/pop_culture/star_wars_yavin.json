@@ -1,0 +1,75 @@
+{
+  "id": "star-wars-yavin",
+  "title": "Star Wars: Battle of Yavin",
+  "description": "The Galactic Empire's Death Star approaches the Rebel base on Yavin 4. The Rebel Alliance has obtained the station's plans, but time is running out.",
+  "type": "POP_CULTURE",
+  "universe": "Star Wars",
+  "era": "0 BBY",
+  "universe_rules": "star_wars",
+  "map": "star_wars_galaxy",
+  "factions": [
+    {
+      "id": "rebel_alliance",
+      "name": "Rebel Alliance",
+      "leader": "Mon Mothma",
+      "government": "Alliance of Free Systems",
+      "initial_military": 25,
+      "initial_tech": 60,
+      "initial_sentiment": 85,
+      "initial_resources": 20,
+      "color": "#FF6600"
+    },
+    {
+      "id": "galactic_empire",
+      "name": "Galactic Empire",
+      "leader": "Emperor Palpatine",
+      "government": "Authoritarian Empire",
+      "initial_military": 95,
+      "initial_tech": 90,
+      "initial_sentiment": 40,
+      "initial_resources": 95,
+      "color": "#555555"
+    },
+    {
+      "id": "hutt_cartel",
+      "name": "Hutt Cartel",
+      "leader": "Jabba the Hutt",
+      "government": "Criminal Syndicate",
+      "initial_military": 30,
+      "initial_tech": 50,
+      "initial_sentiment": 20,
+      "initial_resources": 70,
+      "color": "#8B4513"
+    }
+  ],
+  "canonical_events": [
+    {
+      "id": "death_star_approach",
+      "name": "Death Star Reaches Yavin",
+      "base_probability": 0.95,
+      "trigger_conditions": ["game_start"],
+      "narrative_gravity": 0.95
+    },
+    {
+      "id": "trench_run",
+      "name": "Death Star Trench Run",
+      "base_probability": 0.80,
+      "trigger_conditions": ["rebel_has_plans", "rebel_pilots_ready"],
+      "narrative_gravity": 0.85
+    },
+    {
+      "id": "death_star_destruction",
+      "name": "Destruction of the Death Star",
+      "base_probability": 0.60,
+      "trigger_conditions": ["trench_run_initiated"],
+      "narrative_gravity": 0.70
+    }
+  ],
+  "special_characters": [
+    {"name": "Luke Skywalker", "faction": "rebel_alliance", "force_sensitive": true},
+    {"name": "Darth Vader", "faction": "galactic_empire", "force_sensitive": true},
+    {"name": "Princess Leia", "faction": "rebel_alliance", "force_sensitive": true},
+    {"name": "Han Solo", "faction": "rebel_alliance", "force_sensitive": false},
+    {"name": "Grand Moff Tarkin", "faction": "galactic_empire", "force_sensitive": false}
+  ]
+}

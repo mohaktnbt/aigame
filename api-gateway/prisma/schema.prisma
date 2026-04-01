@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  clerkId   String   @unique
+  email     String   @unique
+  username  String   @unique
+  tokens    Int      @default(0)
+  createdAt DateTime @default(now()) @db.Timestamptz
+
+  games             Game[]
+  tokenTransactions TokenTransaction[]
+  scenarios         Scenario[]         @relation("CreatedScenarios")
+
+  @@index([clerkId])
+  @@map("users")
+}
+
+enum ScenarioType {
+  HISTORICAL
+  SCIFI
+  FANTASY
+  POP_CULTURE
+}
+
+model Scenario {
+  id            String       @id @default(cuid())
+  title         String
+  description   String       @db.Text
+  type          ScenarioType
+  universeRules Json         @default("{}") @db.JsonB
+  mapData       Json         @default("{}") @db.JsonB
+  createdAt     DateTime     @default(now()) @db.Timestamptz
+  creatorId     String
+
+  creator User   @relation("CreatedScenarios", fields: [creatorId], references: [id])
+  games   Game[]
+
+  @@index([type])
+  @@index([creatorId])
+  @@map("scenarios")
+}
+
+enum GameStatus {
+  ACTIVE
+  PAUSED
+  COMPLETED
+  ABANDONED
+}
+
+model Game {
+  id          String     @id @default(cuid())
+  scenarioId  String
+  userId      String
+  status      GameStatus @default(ACTIVE)
+  worldState  Json       @default("{}") @db.JsonB
+  currentTurn Int        @default(0)
+  createdAt   DateTime   @default(now()) @db.Timestamptz
+  updatedAt   DateTime   @updatedAt @db.Timestamptz
+
+  scenario Scenario    @relation(fields: [scenarioId], references: [id])
+  user     User        @relation(fields: [userId], references: [id])
+  events   GameEvent[]
+
+  @@index([userId])
+  @@index([scenarioId])
+  @@index([status])
+  @@map("games")
+}
+
+model GameEvent {
+  id                  String   @id @default(cuid())
+  gameId              String
+  turn                Int
+  type                String
+  title               String
+  narrative           String   @db.Text
+  quantitativeChanges Json     @default("{}") @db.JsonB
+  createdAt           DateTime @default(now()) @db.Timestamptz
+
+  game Game @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  @@index([gameId])
+  @@index([gameId, turn])
+  @@map("game_events")
+}
+
+enum TransactionType {
+  PURCHASE
+  SPEND
+  REFUND
+  BONUS
+}
+
+model TokenTransaction {
+  id        String          @id @default(cuid())
+  userId    String
+  amount    Int
+  type      TransactionType
+  metadata  Json            @default("{}") @db.JsonB
+  createdAt DateTime        @default(now()) @db.Timestamptz
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@map("token_transactions")
+}
